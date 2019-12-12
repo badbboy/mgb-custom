@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.candy.mgbcustom.autogeneration.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <result column="MchId" jdbcType="VARCHAR" property="mchid" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="Type" jdbcType="VARCHAR" property="type" />
+    <result column="ReqKey" jdbcType="VARCHAR" property="reqkey" />
+    <result column="ResKey" jdbcType="VARCHAR" property="reskey" />
+    <result column="State" jdbcType="TINYINT" property="state" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (MchId, Name, Type, 
+      ReqKey, ResKey, State, 
+      CreateTime, UpdateTime)
+    values (#{mchid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqkey,jdbcType=VARCHAR}, #{reskey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select MchId, Name, Type, ReqKey, ResKey, State, CreateTime, UpdateTime
+    from t_mch_info
+  </select>
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <id column="mch_id" jdbcType="VARCHAR" property="mchId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="req_key" jdbcType="VARCHAR" property="reqKey" />
+    <result column="res_key" jdbcType="VARCHAR" property="resKey" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (mch_id, name, type, 
+      req_key, res_key, state, 
+      create_time, update_time)
+    values (#{mchId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqKey,jdbcType=VARCHAR}, #{resKey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    update t_mch_info
+    set name = #{name,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      req_key = #{reqKey,jdbcType=VARCHAR},
+      res_key = #{resKey,jdbcType=VARCHAR},
+      state = #{state,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+  </select>
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <result column="MchId" jdbcType="VARCHAR" property="mchid" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="Type" jdbcType="VARCHAR" property="type" />
+    <result column="ReqKey" jdbcType="VARCHAR" property="reqkey" />
+    <result column="ResKey" jdbcType="VARCHAR" property="reskey" />
+    <result column="State" jdbcType="TINYINT" property="state" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (MchId, Name, Type, 
+      ReqKey, ResKey, State, 
+      CreateTime, UpdateTime)
+    values (#{mchid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqkey,jdbcType=VARCHAR}, #{reskey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select MchId, Name, Type, ReqKey, ResKey, State, CreateTime, UpdateTime
+    from t_mch_info
+  </select>
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <id column="mch_id" jdbcType="VARCHAR" property="mchId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="req_key" jdbcType="VARCHAR" property="reqKey" />
+    <result column="res_key" jdbcType="VARCHAR" property="resKey" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (mch_id, name, type, 
+      req_key, res_key, state, 
+      create_time, update_time)
+    values (#{mchId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqKey,jdbcType=VARCHAR}, #{resKey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    update t_mch_info
+    set name = #{name,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      req_key = #{reqKey,jdbcType=VARCHAR},
+      res_key = #{resKey,jdbcType=VARCHAR},
+      state = #{state,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+  </select>
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <result column="MchId" jdbcType="VARCHAR" property="mchid" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="Type" jdbcType="VARCHAR" property="type" />
+    <result column="ReqKey" jdbcType="VARCHAR" property="reqkey" />
+    <result column="ResKey" jdbcType="VARCHAR" property="reskey" />
+    <result column="State" jdbcType="TINYINT" property="state" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (MchId, Name, Type, 
+      ReqKey, ResKey, State, 
+      CreateTime, UpdateTime)
+    values (#{mchid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqkey,jdbcType=VARCHAR}, #{reskey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select MchId, Name, Type, ReqKey, ResKey, State, CreateTime, UpdateTime
+    from t_mch_info
+  </select>
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <id column="mch_id" jdbcType="VARCHAR" property="mchId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="req_key" jdbcType="VARCHAR" property="reqKey" />
+    <result column="res_key" jdbcType="VARCHAR" property="resKey" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (mch_id, name, type, 
+      req_key, res_key, state, 
+      create_time, update_time)
+    values (#{mchId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqKey,jdbcType=VARCHAR}, #{resKey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    update t_mch_info
+    set name = #{name,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      req_key = #{reqKey,jdbcType=VARCHAR},
+      res_key = #{resKey,jdbcType=VARCHAR},
+      state = #{state,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+  </select>
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <result column="MchId" jdbcType="VARCHAR" property="mchid" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="Type" jdbcType="VARCHAR" property="type" />
+    <result column="ReqKey" jdbcType="VARCHAR" property="reqkey" />
+    <result column="ResKey" jdbcType="VARCHAR" property="reskey" />
+    <result column="State" jdbcType="TINYINT" property="state" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (MchId, Name, Type, 
+      ReqKey, ResKey, State, 
+      CreateTime, UpdateTime)
+    values (#{mchid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqkey,jdbcType=VARCHAR}, #{reskey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select MchId, Name, Type, ReqKey, ResKey, State, CreateTime, UpdateTime
+    from t_mch_info
+  </select>
+  <resultMap id="BaseResultMap" type="org.candy.mgbcustom.autogeneration.entity.User">
+    <id column="mch_id" jdbcType="VARCHAR" property="mchId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="req_key" jdbcType="VARCHAR" property="reqKey" />
+    <result column="res_key" jdbcType="VARCHAR" property="resKey" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    insert into t_mch_info (mch_id, name, type, 
+      req_key, res_key, state, 
+      create_time, update_time)
+    values (#{mchId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{reqKey,jdbcType=VARCHAR}, #{resKey,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="org.candy.mgbcustom.autogeneration.entity.User">
+    update t_mch_info
+    set name = #{name,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      req_key = #{reqKey,jdbcType=VARCHAR},
+      res_key = #{resKey,jdbcType=VARCHAR},
+      state = #{state,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+    where mch_id = #{mchId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select mch_id, name, type, req_key, res_key, state, create_time, update_time
+    from t_mch_info
+  </select>
+</mapper>
